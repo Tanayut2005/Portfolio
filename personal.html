@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+       *{
+          font-family: "Pridi", serif;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #eaeaea; /* พื้นหลังสีอ่อน */
+            color: #333; /* สีข้อความพื้นฐาน */
+        }
+        .container {
+            padding-top: 50px; /* เพิ่มระยะห่างด้านบน */
+            padding-bottom: 50px; /* เพิ่มระยะห่างด้านล่าง */
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px; /* ขอบโค้งมนที่มากขึ้น */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+        }
+        .img-fluid:hover {
+            transform: scale(1.05); /* ขยายภาพเมื่อโฮเวอร์ */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* เพิ่มเงาเมื่อโฮเวอร์ */
+        }
+        .text-center {
+            text-align: center;
+        }
+        .lead {
+            font-size: 1.25rem; /* ขนาดฟอนต์ที่ใหญ่ขึ้นสำหรับข้อความนำ */
+            color: #34495e; /* สีข้อความนำ */
+            background-color: #fff; /* พื้นหลังสีขาวเพื่อความสะอาด */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* เงาสำหรับกล่องข้อความ */
+        }
+        .card-custom {
+            border: none; /* ลบกรอบพื้นฐาน */
+            border-radius: 15px; /* ขอบโค้งมน */
+            background: #fff; /* พื้นหลังของการ์ด */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาให้การ์ดดูลอยตัว */
+            transition: transform 0.3s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+        }
+        .card-custom:hover {
+      
+      transform: translateY(-5px); /* การ์ดลอยขึ้นเมื่อโฮเวอร์ */
+        }
+        .card-custom img {
+            border-top-left-radius: 15px; /* ขอบโค้งมนที่มุมซ้ายบน */
+            border-top-right-radius: 15px; /* ขอบโค้งมนที่มุมขวาบน */
+        }
+        .card-img-top {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container {    /* หมา2ตัว */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .rounded {
+            border-radius: 8px;
+            width: 150px; /* ปรับขนาดตามต้องการ */
+            height: auto;
+            transition: transform 0.3s ease; /* ช่วยทำให้การขยายภาพเรียบ */
+        }
+        .rounded:hover {
+            transform: scale(1.2); /* ขยายภาพเมื่อเมาส์ชี้ */
+        }
+        .text {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+     <!-- หัวเรื่อง -->
+     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4"> <i class="bi bi-award-fill"></i> Tanayut@2-05</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link">หน้าแรก</a></li>
+        <li class="nav-item"><a href="personal.html" class="nav-link active"aria-current="page">ประวัติส่วนตัว</a></li>
+        <li class="nav-item"><a href="educational.html" class="nav-link">ประวัติการศึกษา</a></li>
+        <li class="nav-item"><a href="activity.html" class="nav-link">กิจกรรม</a></li>
+      </ul>
+    </header>
+    <!-- หน้าประวัติส่วนตัว -->
+     
+     <center><img src="/img/Portfolio1.gif" alt="" height="337px"></center>
+      <!-- แนะนำ -->
+     <div class="container">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6 text-center">
+              <div class="card card-custom">
+                  <img src="/img/lol.jpg" class="d-block mx-lg-auto img-fluid" alt="Tanayut Boonma" loading="lazy">
+              </div>
+          </div> 
+          <div class="col-lg-6">
+              <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-5">Tanayut Boonma</h1>
+              <p class="lead">
+                  <strong>สวัสดีครับ</strong><br>
+                  ผมนายธนายุต บุญมา อายุ 19 ปี ชื่อเล่น มิ้น<br>
+                  เกิดวันที่ 8 สิงหาคม พ.ศ. 2548<br>
+                  <br>
+                  ศึกษาอยู่ที่วิทยาลัยเทคนิคสระบุรี<br>
+                  
+              </p>
+          </div>
+      </div>
+  </div>
+  <center><h1 class="text-center"><span class="badge bg-primary">สิ่งที่ชอบ-สิ่งที่ชอบทำ</span></h1></center>
+  <!-- งานอดิเรก -->
+  <style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    .rounded {
+        border-radius: 8px;
+        width: 150px; /* คุณสามารถปรับขนาดได้ตามต้องการ */
+        height: auto;
+    }
+    .text {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img src="img/IMG_9830.JPG" class="rounded" alt="Image 1">
+    <div class="text">
+        <p><h5>ชอบเลี้ยงสุนัขเพราะมันมีความซื่อสัตย์และทำให้ไม่เหงา</h5></p>
+    </div>
+    <img src="img/IMG_9830.JPG" class="rounded" alt="Image 2">
+</div>
+<!-- movie -->
+<center><h1 class="text-center"><span class="badge bg-primary">หนังที่ชอบ</span></h1></center>
+<br>
+<center><div id="carouselExampleFade" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/01.png" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/02.png" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/03.png" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/999.jpg" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/888.png" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/123.png" class="d-block w-50" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></center>
+<br>
+<center><h1 class="text-center"><span class="badge bg-primary">กิจกรรมยามว่าง</span></h1></center>
+<style>
+  .img-fluid {
+      width: 100%; /* ทำให้ภาพปรับขนาดตามความกว้างของคอนเทนเนอร์ */
+      max-width: 450px; /* ขนาดสูงสุดของภาพ */
+      height: auto; /* ทำให้สูงของภาพปรับอัตโนมัติ */
+      transition: transform 0.3s ease; /* ช่วยทำให้การขยายภาพเรียบ */
+  }
+  .img-fluid:hover {
+      transform: scale(1.1); /* ขยายภาพเมื่อเมาส์ชี้ */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+          <img src="img/IMG_0352.PNG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">ออกกำลังกาย</h1>
+          <p class="lead"> ออกกำลังกายเพื่อให้ตัวเองแข็งแรงขึ้น <br> เพื่อให้มีแรงในการทำสิ่งต่างๆที่ใช้แรงมากๆ <br>และทำให้เรามีความมั่นใจมากขึ้น </p>
+      </div>
+  </div>
+</div>
+<!-- เพลง -->
+<center><h1 class="text-center"><span class="badge bg-primary">เพลงโปรด</span></h1></center><br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="img/07.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">EMPTY</h5>
+        <p class="card-text"> ชอบเพราะนักร้องเขาเป็น Rapper ที่ฟังแล้วลื่นหูสุดๆ </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="img/08.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">A Beautiful</h5>
+        <p class="card-text">ชอบฟังเพราะเป็นเพลงที่มาจากหนัง A Beautiful ความหมายดี</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="img/09.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">want u</h5>
+        <p class="card-text"> เป็นเพลงที่ชอบฟังตลอดเวลาเพราะดนตรีมันไพเราะ </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+  </div>
+</div>
+<!-- ส่วนปิดท้าย -->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-body-secondary">Tanayut@2-05</p>
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="700" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="index.html" class="nav-link">หน้าแรก</a></li>
+      <li class="nav-item"><a href="personal.html" class="nav-link active" aria-current="page">ประวัติส่วนตัว</a></li>
+      <li class="nav-item"><a href="educational.html" class="nav-link">ประวัติการศึกษา</a></li>
+      <li class="nav-item"><a href="activity.html" class="nav-link px-2 text-body-secondary">กิจกรรม</a></li>
+    </ul>
+  </footer>
+</div>
+
+  
+      
+</body>
+</html>
