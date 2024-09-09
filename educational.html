@@ -15,6 +15,57 @@
        *{
           font-family: "Pridi", serif;
         }
+
+        /* หน้าประวัติการศึกษา */      
+main {
+    padding: 2rem;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 400px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.education {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: #dbd1d1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(17, 30, 148, 0.1);
+    overflow: hidden;
+}
+
+.school-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.education-details {
+    padding: 1rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
     </style>
 </head>
 <body>
@@ -34,38 +85,43 @@
       </header>
        <!-- หน้าประวัติการศึกษา -->
     
-     
-      <!-- ประวัติการศึกษา -->
-      <center><div class="container">
-        <header>
-            <h1>ประวัติการศึกษา</h1>
-        </header>
-        <section class="education">
-            <div class="degree">
-                <img src="/img/cht.png" alt="XYZ University" class="institution-logo">
-                <div class="degree-info">
-                    <h2>โรงเรียนชุมชนวัดคลองไทร</h2>
-                    <p><strong>จบการศึกษาชั้นประถมศึกษาและชั้นมัธยมศึกษา</strong>
-                </div>
-            </div>
-            <div class="degree">
-                <img src="/img/vrp.png" alt="ABC University" class="institution-logo">
-                <div class="degree-info">
-                    <h2>วิทยาลัยเทคโนโลยีวีรพัฒน์</h2>
-                    <p><strong>Institution:</strong> ABC University</p>
-                    <p><strong>Year:</strong> 2019 - 2021</p>
-                </div>
-            </div>
-            <div class="degree">
-              <img src="/img/sbr.png" alt="ABC University" class="institution-logo">
-              <div class="degree-info">
-                  <h2>Master of Science in Software Engineering</h2>
-                  <p><strong>Institution:</strong> ABC University</p>
-                  <p><strong>Year:</strong> 2019 - 2021</p>
-              </div>
-          </div>
-            <!-- เพิ่มข้อมูลการศึกษาอื่นๆ ที่นี่ -->
+       <!-- ประวัติการศึกษา -->
+       <header>
+        <center><h1>ประวัติการศึกษา</h1></center>
+    </header>
+    <main>
+        <section class="profile">
+            <img src="/img/100.jpg" alt="รูปโปรไฟล์" class="profile-img">
+            <h2>นายธนายุต บุญมา</h2>
         </section>
-    </div></center>
+        <section class="education">
+            <center><h2>การศึกษา</h2></center>
+            <div class="education-item">
+                <img src="/img/cht.png" alt="โรงเรียนที่หนึ่ง" class="school-img">
+                <div class="education-details">
+                    <h3>ระดับการศึกษา 1</h3>
+                    <p>ชื่อสถาบันการศึกษา</p>
+                    <p>ปีที่ศึกษา: 20xx - 20xx</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <img src="/img/vrp.png" alt="โรงเรียนที่สอง" class="school-img">
+                <div class="education-details">
+                    <h3>ระดับการศึกษา 2</h3>
+                    <p>ชื่อสถาบันการศึกษา</p>
+                    <p>ปีที่ศึกษา: 20xx - 20xx</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <img src="/img/sbr.png" alt="โรงเรียนที่สอง" class="school-img">
+                <div class="education-details">
+                    <h3>ระดับการศึกษา 2</h3>
+                    <p>ชื่อสถาบันการศึกษา</p>
+                    <p>ปีที่ศึกษา: 20xx - 20xx</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
 </body>
 </html>
