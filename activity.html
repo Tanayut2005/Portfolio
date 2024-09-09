@@ -15,6 +15,129 @@
       *{
          font-family: "Pridi", serif;
        }
+         /* General Styling */
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color:#FFFFFF;
+            color: #FF0000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        /* Header Styling */
+        .header {
+            background-color: #000;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header h1 {
+            font-size: 3em;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            z-index: 1;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+            transform: rotate(45deg);
+            animation: headerLightMove 10s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes headerLightMove {
+            0% {
+                transform: rotate(45deg) translateY(0);
+            }
+            100% {
+                transform: rotate(45deg) translateY(100%);
+            }
+        }
+
+        /* Activity Section */
+        .activity {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .activity-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .activity-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .activity-card h3 {
+            font-size: 1.8em;
+            margin: 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .activity-card p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #bbb;
+        }
+        .activity-card::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            top: -50%;
+            left: -50%;
+            transform: rotate(45deg);
+            transition: transform 0.6s ease;
+        }
+        .activity-card:hover::before {
+            transform: rotate(45deg) translateY(100%);
+        }
+        .activity-card:hover img {
+            transform: scale(1.1);
+        }
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(53, 39, 240);
+            color: #000;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 30px;
+            margin-top: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #5c6bc0;
+        }
    </style>
 </head>
 <body>
@@ -28,9 +151,64 @@
         <ul class="nav nav-pills">
            <li class="nav-item"><a href="index.html" class="nav-link" >หน้าแรก</a></li>
             <li class="nav-item"><a href="personal.html" class="nav-link">ประวัติส่วนตัว</a></li>
-            <li class="nav-item"><a href="educational.html" class="nav-link" >ประวัติการศึกษา</a></li>
-          <li class="nav-item"><a href="activity.html" class="nav-link active" aria-current="page">กิจกรรม</a></li>          
+            <li class="nav-item"><a href="educational.html"  class="nav-link " >ประวัติการศึกษา</a></li>
+          <li class="nav-item"><a href="activity.html" class="nav-link active"aria-current="page">กิจกรรม</a></li>          
         </ul>
       </header>
+      
+      <!-- หน้ากิจกรรม -->
+    <div class="header">
+      <h1>กิจกรรมของฉัน</h1>
+      <p><h3>กิจกรรมที่ฉันทำ</h3></p>
+  </div><br>   
+  <div class="container">
+      <div class="activity">
+          <!-- กิจกรรมที่ 1 -->
+          <div class="activity-card">
+              <img src="/img/5.png" alt="กิจกรรม 1">
+              <h3>กิจกรรมพี่อ้อย พี่ฉอด</h3>
+              <p>เป็นกิจกรรมให้ความรู้ ให้มีความบันเทิงสนุกสนาน</p>
+          </div>
+
+          <!-- กิจกรรมที่ 2 -->
+          <div class="activity-card">
+              <img src="/img/2.png" alt="กิจกรรม 2">
+              <h3>ฝึกงานที่ อ.บ.ต คลองเรือ</h3>
+              <p>ได้เรียนรู้เกี่ยวกับองค์กรของสถานที่นั้นได้เรียนรู้อะไรต่างๆ</p>
+          </div>
+
+          <!-- กิจกรรมที่ 3 -->
+          <div class="activity-card">
+              <img src="/img/IMG_9207.PNG" alt="กิจกรรม 3" height="340px">
+              <h3>สอบความปลอดภัยคอมพิวเตอร์</h3>
+              <p>ได้เรียนรู้เกี่ยวกับคอมพิวเตอร์มากขึ้นและรู้เกี่ยวกับความปลอดภัย</p>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+    <div class="activity">
+        <!-- กิจกรรมที่ 4 -->
+        <div class="activity-card"> 
+            <img src="/img/IMG_0357.PNG" alt="กิจกรรม 1" height="340">
+            <h3>สตรีมเกมผ่าน Tiktok </h3>
+            <p>ได้ช่วยให้สร้างรายได้และได้เรียนรู้การสตรีมเกม</p>
+        </div>
+
+        <!-- กิจกรรมที่ 5 -->
+        <div class="activity-card">
+            <img src="/img/1.png" alt="กิจกรรม 2">
+            <h3>แข่งกีฬาสี</h3>
+            <p>ได้เรียนรู้การรู้แพ้รู้ชนะและได้ออกกำลังกาย</p>
+        </div>
+
+        <!-- กิจกรรมที่ 6 -->
+        <div class="activity-card">
+            <img src="/img/IMG_0015.PNG" alt="กิจกรรม 3" height="340">
+            <h3>การพัฒนาแอปพลิเคชัน</h3>
+            <p>สร้างแอปพลิเคชันที่ตอบโจทย์ความต้องการของผู้ใช้งาน</p>
+        </div>
+    </div>
+</div>
+         
 </body>
 </html>
